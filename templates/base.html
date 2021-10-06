@@ -1,6 +1,11 @@
 {% extends "bootstrap/base.html" %}
 {% block title %}Tae Hee's Site{% endblock %}
 {% block navbar %}
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+<head>
+ <link rel = "dark mode" href="static/index.css">
+</head>
 <div class="navbar navbar-inverse" role="navigation">
  <div class="container">
  <div class="navbar-header">
@@ -11,11 +16,13 @@
  <span class="icon-bar"></span>
  <span class="icon-bar"></span>
  </button>
- <a class="navbar-brand" href="/">Tae Hee's Site</a>
+ <a class="navbar-brand" href="/">Home</a>
  </div>
  <div class="navbar-collapse collapse">
- <ul class="nav navbar-nav">
- <li><a href="/">Home</a></li>
+   <ul class="nav navbar-nav">
+     <li><a href="#About Me">About me</a></li>
+    <li><a href="#resume">Work Experience</a></li>
+     <li><a href="#projects">Projects</a></li>
  </ul>
  </div>
  </div>
@@ -31,10 +38,7 @@
 -->
 {% block head %}
 {{ super() }}
-<link rel="shortcut icon" href="{{ url_for('static', filename='Screen Shot 2021-08-31 at 5.50.21 PM.png') }}"
- type="image/x-icon">
-<link rel="icon" href="{{ url_for('static', filename='Screen Shot 2021-08-31 at 5.50.21 PM.png') }}"
- type="image/x-icon">
+
 {% endblock %}
 
 {% block scripts %}

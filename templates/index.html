@@ -1,10 +1,81 @@
 {% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 {% block title %}Tae Hee's Site{% endblock %}
 {% block page_content %}
  <div class="page-header">
- <h1>Welcome to the Homepage!</h1>
+   <center>
+ <h1>Tae Hee Lee</h1>
+     <h3>
+         Systems Engineer | Aspiring Software Engineer
+     </h3>
+       </center>
  </div>
-<p>The local date and time is {{ moment(current_time).format('LLL') }}.</p>
-<p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
+<div class = "About me" id = "About Me">
+    <div class = "page-header">
+        <h2>About Me</h2>
+        <center>
+            <p>I am Systems Engineer at King Street Capital Management.<br>
+                 I graduated with a B.A. in Computer Science from Rutgers University and actively working to get
+                 back into Software Engineering.
+                  </p>
+        </center>
+    </div>
+</div>
+<!-- Section to handle work experience -->
+<div class = "resume" id ="resume">
+    <div class = "page-header">
+        <h2>Work Experience</h2>
+            <div class = "workexp-block">
+             <div class = "workexp-header">
+                <h3>Systems Engineer</h3>
+                  <p>September 2019 - Current</p>
+            </div>
+                <div class = "workexp-content">
+                    <h4>King Street Capital Management</h4>
+                    <ul>
+                      <li>Streamlined onboarding, offboarding, and exchange permissions with several powershell/python/RESTAPI scripts removing manual process</li>
+                      <li>Developed and implemented powershell scripts with interactiveGUI to migrate automate user mailbox migration to Exchange Online from on premise environment leading to a streamlined process.</li>
+                      <li>Created and improved workflows on KACE by updating old smart labels with optimized SQL data allowing team to receive in-depth reports and statistics.</li>
+                      <li>Facilitated with implementation of winlogbeat into the enterprise environment by configuringYAML files to allow for accurate company-wide reporting (Accountlockouts, update to sensitive security groups, printing logs etc).</li>
+                      <li>Monitored and configured VLANs on Cisco switch ports to insure no foreign devices connect to enterprise network.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class = "workexp-block">
+                <div class = "workexp-header">
+                    <h3>Systems Administrator</h3>
+                    <p>February 2018 - September 2019</p>
+                  </div>
+                    <div class = "workexp-content">
+                    <ul>
+                      <li>Produced the back end and frontend of application that manages Active Directory creation/management using C# and .NET framework allowing for secure changes to Active Directory.</li>
+                      <li>Revamped internal ticketing system to improve ticketing workflow such as automatic assignments to necessary employee, creating subtasks, and emailing after assigning to employee.</li>
+                      <li>Configured and implemented Single Sign On for employee payroll system using Active Directory Federation Services Server.</li>
+                    </ul>
+                    </div>
+            </div>
+               <center>
+                   <a href ="static/Tae Hee Lee Resume.pdf" title = "Download CV"  target="_blank"  class="button button-primary">
+                   <button class="button button1">Download CV</button>
+              </a>
+               </center>
+    </div>
+</div>
+<div class = "projects" id = "projects">
+    <div class = "page-header">
+    <h2>
+        <a href="https://github.com/tl373" target="_blank">Github link</a>
+    </h2>
+    <iframe id = "discord widget" src="https://e.widgetbot.io/channels/721530671155249263/894409490059915285" height="600" width="600" align = "left" style ="border:none"></iframe>
+    <iframe id = "googlesheet widget" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZBPL92AIRIbksHYZuBQsWa7ze_6j9orVvhRARgOSB3adO3g2GhNn8uOc9OE7rNdcn3WS3xkAbnYc7/pubhtml?widget=true&amp;headers=false" height="600" width="500" align = "right" style ="border:none"></iframe>
+    <button class ="button button2" onclick="testmapfunction()">Test Random Map function</button>
+    <button class ="button button2" onclick="testgettingmyteam()">Test Getting team info</button>
+    <button class ="button button2" onclick="testgettingallteams()">Test getting all teams</button>
+    <button class ="button button2" onclick="refreshIframe()">Refresh</button>
+
+    </div>
+
+</div>
+
 {% endblock %}
 
