@@ -1,27 +1,28 @@
+function reload() {
+    document.getElementById('discord widget').src += '';
+} btn.onclick = reload;
+
+
 function createnewrequest(){
     const request = new XMLHttpRequest();
-    request.open("POST", "https://discord.com/api/webhooks/894771421451001876/ndrWQ7ao-ebz76RyCbzsRsuMISI7OLHz6ieMLNpm1EfXZMlExeLfAF-ZvvcZT-5pgBBB");
+    request.open("POST", "https://discord.com/api/webhooks/895464354093367376/VPG_yNORkYMXYjCgCkZhDF3-Bbz14sfAT_dQjFfBgJeVx3AkG0k_WUTxlbHQG5-7S_mZ");
     request.setRequestHeader('Content-type', 'application/json');
-return request;
+    return request;
 }
 
 function testmapfunction(){
-  request = createnewrequest();
+request = createnewrequest();
+
   const params = {
     username: "Test-User",
     content: "!randommap"
   };
-
+console.log("mapfucntion")
 request.send(JSON.stringify(params));
+
+reload()
 }
 
-function refreshIframe() {
-//    var ifr = document.getElementsByName('discord widget')[0];
-//    ifr.src = ifr.src;
-    document.getElementById('googlesheet widget').contentWindow.location.reload();
-//    var iframe = document.getElementById('discord widget');
-//    iframe.reload(true);
-}
 
 function testgettingmyteam() {
    request =  createnewrequest();
@@ -30,6 +31,8 @@ function testgettingmyteam() {
         content: "!myTeam"
       };
 request.send(JSON.stringify(params));
+
+reload()
 }
 
 function testgettingallteams(){
@@ -39,6 +42,7 @@ function testgettingallteams(){
         content: "!allTeams"
       };
 request.send(JSON.stringify(params));
+reload()
 }
 
 
